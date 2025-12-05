@@ -1,0 +1,40 @@
+{% extends "index.html" %}
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body > 
+      {% block content5 %} 
+    {% endblock content5 %} 
+     
+    {% block footer %}
+    {% endblock footer %}
+
+ 
+     {% block content4 %}
+     
+     <h1 style="text-align: center;width: 15cm;color: white;"> WELCOME TO ADMIN PAGE</h1>
+      {% endblock content4 %}
+   
+    {% block content %}
+     <table style="background-color: beige;" border="3">
+        <tr>
+            <th><a  href="teacherregister">ADD TEACHER|</a>" "  </th>
+            <th ><a href="View_student_admin">VIEW STUDENT|</a>" " " </th>
+            <th><a href="view_teacher">VIEW TEACHER|</a>" " "</th>
+            <th><a href="logout">LOGOUT</a></th>
+
+        </tr>
+    </table>
+    {% endblock content %}
+</body>
+</html>

@@ -1,0 +1,55 @@
+{% extends "teacherhome.html" %}
+{% load static %}
+
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  
+    {% block content5 %} 
+    {% endblock content5 %} 
+    {% block footer %}
+    {% endblock footer %}
+  {% block content4 %} 
+  <h1 style="width: 19cm;text-align: center;color: white;">EDIT TEACHER</h1>
+  {% endblock content4 %} 
+   {% block content1 %}
+ 
+  <div class="container mt-5">
+   <form action="/updateteacher/{{ view.id }}" method="post" class="text-center">
+    {% csrf_token %}
+
+    <input type="text" name="firstname" value="{{ data.first_name }}" 
+           class="form-control w-50 mx-auto mb-3" placeholder="First Name">
+
+    <input type="text" name="lastname" value="{{ data.last_name }}" 
+           class="form-control w-50 mx-auto mb-3" placeholder="Last Name">
+
+    <input type="email" name="email" value="{{ data.email }}" 
+           class="form-control w-50 mx-auto mb-3" placeholder="Email">
+
+    <input type="text" name="address" value="{{ data.address }}" 
+           class="form-control w-50 mx-auto mb-3" placeholder="Address">
+
+    <input type="number" name="experience" value="{{ data.experience }}" 
+           class="form-control w-50 mx-auto mb-3" placeholder="Experience">
+
+    <input type="number" name="salary" value="{{ data.salary }}" 
+           class="form-control w-50 mx-auto mb-3" placeholder="Salary">
+
+    <input type="number" name="phonenumber" value="{{ data.phone_number }}" 
+           class="form-control w-50 mx-auto mb-4" placeholder="Phone Number">
+
+<button type="submit" class="btn btn-primary mb-5">UPDATE</button>
+</div>
+</form>
+
+{% endblock content1 %} 
+
+</body>
+</html>

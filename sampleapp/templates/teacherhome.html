@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+{% load static %}
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+      {% block footer %}
+    {% endblock footer %}
+     {% block content4 %}
+    <h1 style="color: black;width: 19cm;text-align: center;color: white;">TEACHER HOME</h1>
+     {% endblock content4 %}
+    {% block content %}
+<table style="background-color: beige;" border="3">
+        <tr>
+            <th ><a href="view_student_teacher"> VIEW STUDENTS|</a>"" </th>
+            <th><a href="editteacher">EDIT TEACHER|</a>" "</th>
+            <th><a href="logout">LOGOUT|</a></th>
+
+        </tr>
+    </table>
+{% endblock content %}
+
+   
+</body>
+</html>

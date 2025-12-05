@@ -1,0 +1,73 @@
+{% extends "home.html" %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+  {% block content1 %}
+    {% endblock content1 %}
+    {% block footer %}
+    {% endblock footer %}
+{% block content4 %}
+
+   
+     <h1 style="color:whiteblack;text-align: center;width: 25cm;text-align: center;">REGISTER PAGE</h1>
+{% endblock content4 %}
+{% block content5 %}
+  <div style="text-align: center;">
+        
+<div class="container mt-5">
+    
+
+    <form action="" method="post">
+      {% csrf_token %}
+  
+<div class="container mb-5">
+
+    <label>Firstname</label>
+    <input type="text" name="firstname" placeholder="enter your firstname" class="form-label"><br><br>
+
+    <label>Lastname</label>
+    <input type="text" name="lastname" placeholder="enter your lastname" class="form-label"><br><br>
+
+    <label>Email</label>
+    <input type="email" name="email" placeholder="enter your email" class="form-label"><br><br>
+
+    <label>Address</label>
+    <input type="text" name="address" placeholder="enter your address" class="form-label"><br><br>
+
+    <label>Phone</label>
+    <input type="number" name="phone_number" placeholder="enter your phone number" class="form-label"><br><br>
+
+    <label>Username</label>
+    <input type="text" name="username" placeholder="username" class="form-label"><br><br>
+
+    <label>Guardian</label>
+    <input type="text" name="guardian" placeholder="guardian" class="form-label"><br><br>
+
+    <label>Password</label>
+    <input type="password" name="password" placeholder="password" class="form-label"><br><br>
+
+    <!-- Space between button and footer -->
+    <button type="submit" class="btn btn-primary mt-3">LOGIN</button>
+
+</div>
+
+
+</div>
+
+
+    </form>
+    {% endblock content5 %}
+    </div>
+
+  </div>
+  
+</body>
+</html>

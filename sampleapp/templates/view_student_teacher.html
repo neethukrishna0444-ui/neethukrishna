@@ -1,0 +1,51 @@
+{% extends "teacherhome.html" %}
+{% load static %}
+
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block content5 %} 
+    {% endblock content5 %} 
+ 
+    {% block footer %}
+    {% endblock footer %}
+     {% block content4 %}
+    <h1 style="width: 16cm;text-align:center;color: white;">VIEW STUDENTS</h1>
+     {% endblock content4 %}
+    {% block content1 %}
+    <div class="container mt-5">
+        <div class="container mb-5">
+<table class="table table-bordered table-striped text-center">     <tr>
+            <th>FIRST NAME</th>
+            <th>LAST NAME</th>
+             <th>ADDRESS</th>
+            <th>EMAIL </th>
+            <th>PHONE NUMBER</th>
+            <th>GUARDIAN</th>
+            
+        {% for i in  view %}
+        <tr>
+          <td>{{i.Student_id.first_name}}</td>
+          <td>{{i.Student_id.last_name}}</td>
+          <td>{{i.Student_id.address}}</td>
+          <td>{{i.Student_id.email}}</td>
+          <td>{{i.Student_id.phone_number}}</td>
+          <td>{{i.guardian}}</td>
+         
+        </tr>
+         {% endfor %}
+    </table>
+    </div>
+    </div>
+    {% endblock content1 %}
+ </div>
+</body>
+</html>
+
+    
